@@ -96,6 +96,19 @@ cd maven4enterprise/simple-war
 mvn deploy
 ```
 
+### Application Deployment
+
+The example is under `modular-war/modular-war-deploy`. It provides the examples of using maven profiles to deploy applications to different envrionment, via ssh or wagon.
+I personally do not recommend to do application deployment from maven other than local deployment. Maven should publish artifacts to repository,
+and let the IT automation tools like Ansible or puppet to do deployment.
+
+
+
+```
+cd maven4enterprise/modular-war
+mvn -P env-dev,deploy
+```
+
 
 ### Release
 
