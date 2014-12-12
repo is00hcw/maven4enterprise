@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.googlecode.m4enterprise</groupId>
+		<groupId>org.tongqing.m4enterprise</groupId>
 		<artifactId>modular-war-parent</artifactId>
 		<version>0.0.18-SNAPSHOT</version>
 		<relativePath>../modular-war-parent</relativePath>

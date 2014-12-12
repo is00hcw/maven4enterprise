@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.googlecode.m4enterprise</groupId>
+	<groupId>org.tongqing.m4enterprise</groupId>
 	<artifactId>corporate-pom</artifactId>
 	<version>1.44-SNAPSHOT</version>
 	<packaging>pom</packaging>
@@ -93,7 +93,7 @@
 		<acme-corporate-pom.organizationUrl>http://www.acme.com</acme-corporate-pom.organizationUrl>
 		<acme-corporate-pom.siteUrl>http://sites.intranet.acme.com</acme-corporate-pom.siteUrl>
 
-		<acme-corporate-pom.ciManagementUrl>http://bamboo.intranet.acme.com/</acme-corporate-pom.ciManagementUrl>
+		<acme-corporate-pom.ciManagementUrl>http://jenkins.intranet.acme.com/</acme-corporate-pom.ciManagementUrl>
 		<acme-corporate-pom.issueManagementUrl>http://jira.intranet.acme.com/</acme-corporate-pom.issueManagementUrl>
 
 		<acme-corporate-pom.sonarUrl>http://sonar.intranet.acme.com/sonar</acme-corporate-pom.sonarUrl>
@@ -209,11 +209,12 @@
 
 	<!-- <contributors /> -->
 
-	<!--<scm>-->
-		<!--<connection>scm:svn:http://m4enterprise.googlecode.com/svn/trunk/corporate-pom</connection>-->
-		<!--<developerConnection>scm:svn:https://m4enterprise.googlecode.com/svn/trunk/corporate-pom</developerConnection>-->
-		<!--<url>http://code.google.com/p/m4enterprise/source/browse/trunk/corporate-pom</url>-->
-	<!--</scm>-->
+	<scm>
+		<connection>scm:git:https://github.com/tongqqiu/maven4enterprise.git</connection>
+		<developerConnection>scm:git:git@github.com:tongqqiu/maven4enterprise.git</developerConnection>
+		<url>https://github.com/tongqqiu/maven4enterprise.git</url>
+		<tag>HEAD</tag>
+	</scm>
 
 	<build>
 		<!-- Plugin order based on http://maven.apache.org/plugins/index.html -->

@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.googlecode.m4enterprise</groupId>
+		<groupId>org.tongqing.m4enterprise</groupId>
 		<artifactId>corporate-pom</artifactId>
 		<version>1.44-SNAPSHOT</version>
 		<relativePath>../corporate-pom</relativePath>

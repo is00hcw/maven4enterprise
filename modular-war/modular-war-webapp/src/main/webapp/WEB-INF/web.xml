@@ -4,7 +4,7 @@
 
 	<servlet>
 		<servlet-name>applicationServlet</servlet-name>
-		<servlet-class>com.googlecode.m4enterprise.webapp.ApplicationServlet</servlet-class>
+		<servlet-class>org.tongqing.m4enterprise.webapp.ApplicationServlet</servlet-class>
 		<init-param>
 			<param-name>name</param-name>
 			<param-value>Web Application</param-value>
