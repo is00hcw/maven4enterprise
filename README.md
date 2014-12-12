@@ -113,14 +113,14 @@ then switch to the release branch. After finishing the release work, run
 mvn jgitflow:release-start
 ```
 
-It will merge then changes to development, update the development POM to next SNAPSHOT, and tag the release to master branch.
+It will merge then changes to development branch, update the development POM to next SNAPSHOT, and tag the release version to master branch.
 
 
 ## TOOD
 
 - Linux based packaging like rpm, deb
 - JRebel integration
-- More realistic integration
+- More realistic integration test
 
 
 ## Origin
