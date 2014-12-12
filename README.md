@@ -10,7 +10,7 @@ It doesn't have to be JAVA, could be other JVM based languages like Scala.
 
 ## Features
 
-- Single and modular example.
+- Single and modular examples
 - Centralized `corporate-pom` to manage the settings of
     - Encoding
     - Compiler version
