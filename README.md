@@ -5,8 +5,6 @@ Maven Seed for Enterprise Usage
 ## Goal
 
 Serve as a starting point for enterprise and commercial maven-based development.
-It doesn't have to be JAVA, could be other JVM based languages like Scala.
-
 
 ## Features
 
