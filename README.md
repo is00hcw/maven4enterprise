@@ -1,6 +1,7 @@
 Maven Seed for Enterprise Usage
 ================
 
+[![Build Status](https://travis-ci.org/tongqqiu/maven4enterprise.svg?branch=develop)](https://travis-ci.org/tongqqiu/maven4enterprise)
 
 ## Goal
 
