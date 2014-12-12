@@ -22,6 +22,8 @@ Serve as a starting point for enterprise and commercial maven-based development.
     - Unit and Integration Test
     - JavaDoc, Xref Source Code
 - Deployment automation
+    - artifacts deployment to repository
+    - application deployment
 - Git flow for releasing
 
 
@@ -46,20 +48,18 @@ git clone https://github.com/tongqqiu/maven4enterprise.git
 ```
 cd maven4enterprise/simple-war
 mvn install
-
-cd maven4enterprise/modular-war
+cd ../modular-war
 mvn install
 ```
 
 ### Site
 
-It will generate the stie containing project information, test reports, and java documentations.
+It will generate the site containing project information, test reports, and java documentations.
 
 ```
-cd maven4enterprise/simple-war
+cd ../simple-war
 mvn site
-
-cd maven4enterprise/modular-war
+cd ../modular-war
 mvn site
 ```
 
@@ -90,7 +90,7 @@ The easiest way to do that is to add the following profile to `$HOME/.m2/setting
 Then
 
 ```
-cd maven4enterprise/simple-war
+cd ../simple-war
 mvn deploy
 ```
 
@@ -103,8 +103,18 @@ and let the IT automation tools like Ansible or puppet to do deployment.
 
 
 ```
-cd maven4enterprise/modular-war
+cd ../modular-war
 mvn -P env-dev,deploy
+```
+
+### Assembly
+
+In many cases, we need to package not only jar/war, but also configurations and scripts as a whole distribution.
+Here is an example
+
+```
+cd ../module-war
+mvn -P dist
 ```
 
 
@@ -114,7 +124,7 @@ Remember to configure 'scm' part correctly.
 The release process follows [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) best practice.
 
 ```
-cd maven4enterprise/simple-war
+cd ../simple-war
 mvn jgitflow:release-start
 ```
 
@@ -130,9 +140,8 @@ It will merge then changes to development branch, update the development POM to 
 
 ## TOOD
 
-- Linux based packaging like rpm, deb
-- JRebel integration
 - More realistic integration test
+- Deeper JRebel integration
 
 
 ## Origin

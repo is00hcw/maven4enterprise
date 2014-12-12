@@ -70,6 +70,64 @@
 
 	<profiles>
 		<profile>
+			<id>dist</id>
+
+			<build>
+				<finalName>${modular-war-deploy.deployableId}</finalName>
+
+				<filters>
+					<filter>src/main/filters/default.properties</filter>
+				</filters>
+				<plugins>
+				<!-- Filter Application Server descriptors -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>copy-resources</id>
+							<phase>generate-resources</phase>
+							<goals>
+								<goal>copy-resources</goal>
+							</goals>
+							<configuration>
+								<outputDirectory>${modular-war-deploy.configDir}</outputDirectory>
+								<resources>
+									<resource>
+										<directory>src/main/config</directory>
+										<filtering>true</filtering>
+									</resource>
+								</resources>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>2.4</version>
+						<executions>
+							<execution>
+								<id>tgz-package</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<descriptors>
+										<descriptor>${project.basedir}/src/main/assembly/tgz.xml</descriptor>
+									</descriptors>
+									<appendAssemblyId>false</appendAssemblyId>
+									<!--<attach>false</attach>-->
+									<finalName>${modular-war-deploy.deployableId}</finalName>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+			</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>deploy</id>
 
 			<activation>
