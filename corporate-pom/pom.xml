@@ -155,6 +155,7 @@
 		<acme-corporate-pom.sourceVersion>2.2.1</acme-corporate-pom.sourceVersion>
 		<acme-corporate-pom.stageVersion>1.0-alpha-2</acme-corporate-pom.stageVersion>
 		<acme-corporate-pom.toolchainsVersion>1.0</acme-corporate-pom.toolchainsVersion>
+		<acme-corporate-pom.jGitFlowVersion>1.0-m4.3</acme-corporate-pom.jGitFlowVersion>
 	</properties>
 
 	<!-- ================= -->
@@ -208,11 +209,11 @@
 
 	<!-- <contributors /> -->
 
-	<scm>
-		<connection>scm:svn:http://m4enterprise.googlecode.com/svn/trunk/corporate-pom</connection>
-		<developerConnection>scm:svn:https://m4enterprise.googlecode.com/svn/trunk/corporate-pom</developerConnection>
-		<url>http://code.google.com/p/m4enterprise/source/browse/trunk/corporate-pom</url>
-	</scm>
+	<!--<scm>-->
+		<!--<connection>scm:svn:http://m4enterprise.googlecode.com/svn/trunk/corporate-pom</connection>-->
+		<!--<developerConnection>scm:svn:https://m4enterprise.googlecode.com/svn/trunk/corporate-pom</developerConnection>-->
+		<!--<url>http://code.google.com/p/m4enterprise/source/browse/trunk/corporate-pom</url>-->
+	<!--</scm>-->
 
 	<build>
 		<!-- Plugin order based on http://maven.apache.org/plugins/index.html -->
@@ -507,6 +508,12 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-toolchains-plugin</artifactId>
 					<version>${acme-corporate-pom.toolchainsVersion}</version>
+				</plugin>
+
+				<plugin>
+					<groupId>external.atlassian.jgitflow</groupId>
+					<artifactId>jgitflow-maven-plugin</artifactId>
+					<version>${acme-corporate-pom.jGitFlowVersion}</version>
 				</plugin>
 
 				<!-- Other plugins -->
