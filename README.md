@@ -36,6 +36,7 @@ Serve as a starting point for enterprise and commercial maven-based development.
 
 - JDK
 - Maven
+-(Optional) fpm and rpmbuild for rpm building
 
 ### Check out the source code
 
