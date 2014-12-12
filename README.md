@@ -110,13 +110,21 @@ mvn -P env-dev,deploy
 ### Assembly
 
 In many cases, we need to package not only jar/war, but also configurations and scripts as a whole distribution.
-Here is an example
+Here is an example to assemble as `tgz`.
 
 ```
 cd ../module-war
 mvn -P dist
 ```
 
+In many other cases, we want to build a linux installer like rpm or deb packages, besides of `tgz`.
+In our example profile `rpm`, we use [`fpm`](https://github.com/jordansissel/fpm) as a tool, since it supports a wide range of packaging options.
+You need to install `fpm` and `rpmbuild` to make it work. Note that `rpm` usually requires extra scripts before and after
+rpm installation. It is out of scope of this seed project.
+
+```
+mvn -P rpm
+```
 
 ### Release
 
@@ -140,7 +148,7 @@ It will merge then changes to development branch, update the development POM to 
 
 ## TOOD
 
-- More realistic integration test
+- More realistic integration tests
 - Deeper JRebel integration
 
 
