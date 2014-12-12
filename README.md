@@ -99,7 +99,8 @@ mvn deploy
 
 ### Release
 
-The release process follows git-flow best practice.
+Remember to configure 'scm' part correctly.
+The release process follows [git-flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) best practice.
 
 ```
 cd maven4enterprise/simple-war
