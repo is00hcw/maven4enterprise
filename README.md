@@ -5,7 +5,8 @@ maven seed for enterprise
 
 ## Goal
 
-- Serve as a ready-to-use starting point for enterprise and commercial maven-based (not have to be JAVA, could by any JVM based language) development.
+- Serve as a ready-to-use starting point for enterprise and commercial maven-based
+(do not have to be JAVA, could by any JVM based language) development.
 
 ## Usage
 
